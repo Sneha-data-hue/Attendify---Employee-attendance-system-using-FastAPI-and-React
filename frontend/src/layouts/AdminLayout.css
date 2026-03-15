@@ -1,0 +1,89 @@
+/* Layout container */
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 240px;
+  background: #000;
+  border-right: 1px solid #1f1f1f;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo / Title */
+.admin-sidebar h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar buttons */
+.admin-sidebar button {
+  background: transparent;
+  border: none;
+  padding: 12px 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 15px;
+  color: #d1d1d1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.admin-sidebar button:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/* Active click */
+.admin-sidebar button:active {
+  background: #eaeaea;
+  color: #000;
+}
+
+/* Main content area */
+.admin-main {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+/* Page title */
+.admin-main h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Subtitle text */
+.admin-main p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Card style (for dashboard boxes) */
+.card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}

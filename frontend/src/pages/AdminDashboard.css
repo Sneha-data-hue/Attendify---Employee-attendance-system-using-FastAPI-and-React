@@ -1,0 +1,73 @@
+/* ===== Apple Black & White Admin Layout ===== */
+
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Helvetica Neue", sans-serif;
+}
+
+/* ===== Sidebar ===== */
+.admin-sidebar {
+  width: 240px;
+  background-color: #000000;
+  padding: 35px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.admin-sidebar h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 45px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar Buttons */
+.admin-sidebar button {
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: #d1d1d6;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.admin-sidebar button:hover {
+  background-color: #1c1c1e;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* Click effect */
+.admin-sidebar button:active {
+  background-color: #2c2c2e;
+}
+
+/* ===== Main Content ===== */
+.admin-main {
+  flex: 1;
+  padding: 70px;
+  background-color: #ffffff;
+}
+
+.admin-main h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.admin-main p {
+  font-size: 16px;
+  color: #6e6e73;
+}

@@ -1,0 +1,112 @@
+.signup-page {
+  display: flex;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* LEFT SIDE */
+
+.signup-left {
+  flex: 1;
+  background:white;
+  color: black;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-left h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.signup-left ul li {
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.logo img {
+  height: 200px;   /* adjust if needed */
+  width: auto;
+  object-fit: contain;
+}
+
+/* RIGHT SIDE — DARK */
+
+.signup-right {
+  flex: 1;
+  background: #000;   /* Black background */
+  color: white;       /* Text becomes white */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+.signup-right h2 {
+  font-size: 32px;
+  color: white;
+}
+
+.sub {
+  margin-bottom: 30px;
+  color: #aaa;   /* Soft grey subtitle */
+}
+
+/* Google button — dark style */
+.google-btn {
+  background: #111;
+  border: 1px solid #333;
+  padding: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #777;
+}
+
+/* Inputs — dark theme */
+.signup-right input {
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #111;
+  color: white;
+}
+
+/* Button */
+.create-btn {
+  background: white;
+  color: black;
+  padding: 14px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Sign in text */
+.signin-text {
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.signin-text span {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}

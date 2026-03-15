@@ -1,0 +1,122 @@
+.pricing-page {
+  background: #000;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.pricing-page h1 {
+  font-size: 3rem;
+}
+
+.pricing-page p {
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+/* TOGGLE */
+.billing-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.billing-toggle span {
+  opacity: 0.5;
+}
+
+.billing-toggle .active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  background: #444;
+  border-radius: 20px;
+  inset: 0;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+
+/* PLANS GRID */
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* PLAN CARD */
+.plan-card {
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: left;
+}
+
+.plan-card h2 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.best-for {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.plan-card ul {
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+.plan-card button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* HIGHLIGHT PLAN */
+.highlight {
+  border: 1px solid #4f9cff;
+  transform: scale(1.05);
+}
