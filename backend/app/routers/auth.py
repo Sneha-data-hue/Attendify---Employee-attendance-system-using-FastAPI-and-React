@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 from app.models.user import User
+from app.models.invite import Invite
 from app.schemas.user import UserCreate
 from app.schemas.token import Token
 from app.services.auth_service import create_user, authenticate_user
@@ -14,9 +15,18 @@ router = APIRouter(tags=["Auth"])
 
 # ✅ REGISTER
 @router.post("/register")
-def register(user: UserCreate, db: Session = Depends(get_db)):
+def register(user: UserCreate, token: str, db: Session = Depends(get_db)):
 
-    # Check if email exists
+    # check invite token
+    invite = db.query(Invite).filter(Invite.token == token).first()
+
+    if not invite:
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid invite token"
+        )
+
+    # check email exists
     existing_user = db.query(User).filter(User.email == user.email).first()
 
     if existing_user:
@@ -25,7 +35,10 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
             detail="Email already registered"
         )
 
-    # Create user
+    # override role and company from invite
+    user.role = invite.role
+    user.company_id = invite.company_id
+
     new_user = create_user(db, user)
 
     return {
