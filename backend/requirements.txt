@@ -11,3 +11,4 @@ numpy
 opencv-python
 email-validator
 pandas
+face_recognition
